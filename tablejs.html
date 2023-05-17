@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>List</title>
+  <link rel="stylesheet" href="tablejs.css">
+</head>
+
+<body>
+  <ul>
+    <h2>Fakultelere uygun qruplari gormek ucun fakultelere click edin:</h2>
+    <li>IT</li>
+    <li>Security</li>
+    <li>KTF</li>
+  </ul>
+  <table border="1" width="50%" style="border-collapse:collapse;">
+    <thead>
+      <tr>
+        <th colspan="5"> Qruplar</th>
+      </tr>
+    </thead>
+    <tbody id="body"></tbody>
+  </table>
+
+  <table border="1" width="60%" style="border-collapse: collapse; margin-top: 20px;">
+    <thead>
+      <tr>
+        <th> Qrup</th>
+        <th> Name</th>
+        <th> Surname</th>
+        <th> Age</th>
+      </tr>
+    </thead>
+    <tbody id="body1"></tbody>
+  </table>
+  <script>
+    let ixtisas = [
+      {
+        faculty: "IT",
+        name: "681",
+        name1: "683",
+        name2: "685",
+        name3: "687",
+      },
+      {
+        faculty: "KTF",
+        name: "671",
+        name1: "673",
+        name2: "675",
+        name3: "677",
+      },
+      {
+        faculty: "Security",
+        name: "691",
+        name1: "693",
+        name2: "695",
+        name3: "697",
+      },
+    ]
+    /* Fakulteye click etdikde qrupun cixmasi  */
+    document.querySelectorAll("li").forEach(item => {
+      item.addEventListener("click", function () {
+        filter_data = ixtisas.filter(x => x.faculty == this.innerText)
+        data(filter_data)
+
+
+      })
+    })
+
+    let filter_data;
+    data(ixtisas)
+    function data(arr) {
+      body.innerHTML = ""
+      arr.forEach(element => {
+        body.innerHTML += `<tr>
+                <td>${element.name}</td>
+                <td>${element.name1}</td>
+                <td>${element.name2}</td>
+                <td>${element.name3}</td>
+    </tr>`
+      });
+    }
+
+    /* Qrupa click edende hemin qrup usaqlarinin cixmasi */
+    let qruplar = [
+      {
+        qrup: "681",
+        name: "Lale",
+        surname: "Ehmedova",
+        age: "17",
+      },
+      {
+        qrup: "683",
+        name: "Lale",
+        surname: "Ehmedova",
+        age: "17",
+      },
+      {
+        qrup: "685",
+        name: "Lale",
+        surname: "Ehmedova",
+        age: "17",
+      },
+      {
+        qrup: "687",
+        name: "Lale",
+        surname: "Ehmedova",
+        age: "17",
+      },
+      {
+        qrup: "671",
+        name: "Lale",
+        surname: "Ehmedova",
+        age: "17",
+      },
+      {
+        qrup: "673",
+        name: "Lale",
+        surname: "Ehmedova",
+        age: "17",
+      },
+      {
+        qrup: "675",
+        name: "Lale",
+        surname: "Ehmedova",
+        age: "17",
+      },
+      {
+        qrup: "677",
+        name: "Lale",
+        surname: "Ehmedova",
+        age: "17",
+      },
+      {
+        qrup: "691",
+        name: "Lale",
+        surname: "Ehmedova",
+        age: "17",
+      },
+      {
+        qrup: "693",
+        name: "Lale",
+        surname: "Ehmedova",
+        age: "17",
+      },
+      {
+        qrup: "695",
+        name: "Lale",
+        surname: "Ehmedova",
+        age: "17",
+      },
+      {
+        qrup: "697",
+        name: "Lale",
+        surname: "Ehmedova",
+        age: "17",
+      },
+    ]
+
+    let qrups_filter;
+    let A = document.querySelectorAll("#body,tr,td");//click etdiyimiz qrup
+    let B = document.querySelectorAll("#body1,tr,td");// qrup ad soyad melumatlari
+    A.forEach(elements => {
+      elements.addEventListener("click", function () {
+        let q = this.innerText;
+        qrups_filter = qruplar.filter(x => x.qrup == q)
+        data(qrups_filter)
+      })
+    });
+
+
+//      data(qruplar);
+//      function data(news) {
+//       body.innerHTML="";
+//       news.forEach(elements => {
+//         B.innerHTML+=`<tr>
+//                 <td>${elements.qrup}</td>
+//                 <td>${elements.name}</td>
+//                 <td>${elements.surname}</td>
+//                 <td>${elements.age}</td>
+//     </tr>`
+//     });
+// }
+
+  </script>
+</body>
+
+</html>

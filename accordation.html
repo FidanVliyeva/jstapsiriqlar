@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordation</title>
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="accordation.css">
+</head>
+
+<body>
+    <div class="accordation">
+        <div class="accordation-item">
+            <div class="accordation-header" active id="A">
+
+                Text1
+            </div>
+            <div class="accordation-body">
+                <div class="accordation-body-content" id="A1">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta corporis dicta nihil molestiae
+                    nobis asperiores illo aperiam molestias, odit sequi? Aliquam sint ab nesciunt modi architecto iure,
+                    cupiditate iste accusamus!
+                    Laborum pariatur nisi consequatur architecto adipisci aliquam perspiciatis voluptates vero sequi
+                    iste, ad, nihil rem aliquid reprehenderit maiores, nobis doloremque itaque ex libero ea commodi. Eos
+                    labore laboriosam quisquam suscipit!
+                    Saepe deserunt consequatur eum in optio officia, enim molestias voluptas reiciendis, sapiente
+                    cumque, velit explicabo hic quos dolores ipsam quisquam modi quasi blanditiis debitis dolorem magni.
+                    Praesentium, maxime! Veniam, ducimus!
+                    Ex aliquam numquam magnam, incidunt, sint hic nihil soluta assumenda ea quo labore? Nulla iusto qui
+                    unde incidunt perspiciatis dolore at alias, perferendis, repellendus, quae in ipsum impedit est
+                    nihil.
+
+                </div>
+            </div>
+        </div>
+        <div class="accordation-item">
+            <div class="accordation-header" active id="B">
+        
+                Text2
+            </div>
+            <div class="accordation-body" >
+                <div class="accordation-body-content" id="B1" >
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta corporis dicta nihil molestiae
+                    nobis asperiores illo aperiam molestias, odit sequi? Aliquam sint ab nesciunt modi architecto iure,
+                    cupiditate iste accusamus!
+                    Laborum pariatur nisi consequatur architecto adipisci aliquam perspiciatis voluptates vero sequi
+                    iste, ad, nihil rem aliquid reprehenderit maiores, nobis doloremque itaque ex libero ea commodi. Eos
+                    labore laboriosam quisquam suscipit!
+                    Saepe deserunt consequatur eum in optio officia, enim molestias voluptas reiciendis, sapiente
+                    cumque, velit explicabo hic quos dolores ipsam quisquam modi quasi blanditiis debitis dolorem magni.
+                    Praesentium, maxime! Veniam, ducimus!
+                    Ex aliquam numquam magnam, incidunt, sint hic nihil soluta assumenda ea quo labore? Nulla iusto qui
+                    unde incidunt perspiciatis dolore at alias, perferendis, repellendus, quae in ipsum impedit est
+                    nihil.
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const texts = document.querySelectorAll(".accordation-header");
+        texts.forEach(text => {
+            text.addEventListener("click", function test() {
+             text.classList.toggle("active");
+        });
+    });
+
+        document.getElementById("A").addEventListener("click",function soz() {
+         document.getElementById("A1").style.display="block"
+        })
+        document.getElementById("B").addEventListener("click",function soz() {
+         document.getElementById("B1").style.display="block"
+        }) 
+    </script>
+</body>
+
+</html>

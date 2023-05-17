@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <link rel="stylesheet" href="addperson.css">
+</head>
+
+<body>
+  <div>
+    <input type="text"  id="search" placeholder="search-person">
+  </div>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Name </th>
+        <th>Surname</th>
+        <th>Age</th>
+        <th id="A">+</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  <br>
+  <br>
+  <div id="Modul">
+    <input type="text" placeholder="name" class="name">
+    <input type="text" placeholder="surname" class="surname">
+    <input type="text" placeholder="age" class="age">
+    <button id="red" value="Add">Add</button>
+    <button id="blue" value="Close">Close</button>
+  </div>
+  <script>
+    // open ve close hisselerinin islemesi
+    document.getElementById("A").addEventListener("click", function Q() {
+      document.querySelector("#Modul").style.display = "block";
+    })
+    document.getElementById("blue").addEventListener("click", function E() {
+      document.querySelector("#Modul").style.display = "none";
+    })
+    document.getElementById("red").addEventListener("click", function () {
+      document.querySelector("#Modul")
+    })
+    //add funksiyasinin ise salinmasi
+    let name = document.querySelector(".name");
+    let surname = document.querySelector(".surname");
+    let age = document.querySelector(".age");
+    let table = document.querySelector("table")
+    document.getElementById("red").addEventListener("click", () => {
+      let tr = document.createElement("tr");
+      tr.className = "y";
+      let td1 = document.createElement("td");
+      td1.textContent = name.value;
+      td1.className = "x";
+      let td2 = document.createElement("td");
+      td2.textContent = surname.value;
+      let td3 = document.createElement("td");
+      td3.textContent = age.value;
+      table.appendChild(tr);
+      tr.appendChild(td1);
+      tr.appendChild(td2);
+      tr.appendChild(td3);
+      let td4 = document.createElement("td");
+      td4.textContent = "remove";
+      tr.appendChild(td4);
+      td4.addEventListener("click", () => {
+        tr.remove();
+      })
+    })
+    document.querySelector("#search").addEventListener("input",function() {
+      let searchInput=document.querySelector("#search");
+      let filter=searchInput.value.toLowerCase();
+      let tritem=document.querySelectorAll('.y');
+      tritem.forEach((item)=>{
+        let text=item.textContent;
+        if(text.toLowerCase().includes(filter.toLowerCase())){
+          item.style.display='';
+        }
+        else {
+          item.style.display="none";
+        }
+
+        
+      })
+    })
+  </script>
+</body>
+
+</html>

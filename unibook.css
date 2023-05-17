@@ -1,0 +1,37 @@
+
+thead{
+    background-color: rgb(212, 137, 23);
+}  
+input{
+    background-color: rgb(207, 167, 107);
+    width: 25px;
+    height: 25px;
+    margin-top: 30px;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+}
+input:hover{
+    background-color: rgb(243, 162, 12);
+}
+.ab{
+    background-color: aliceblue;
+    display: inline-block;
+    font-weight: 700;
+    word-spacing: 50px;
+    cursor: pointer;
+}
+.ab:hover{
+    transition: all 0.5px ease;
+  background-color: rgb(248, 161, 0);
+  height:25px;
+}
+div{
+    margin-left: 400px;
+}
+#tab2{
+    display: none;
+}
+#tab3{
+    display: none;
+}

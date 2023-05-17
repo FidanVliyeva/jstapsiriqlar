@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.accordation{
+    width: 80%;
+    max-width: 1000px;
+    font-size: 15px;
+    color: black;
+   padding: 40px;
+   margin: 2rem auto;
+   border-radius: 10px;
+    background-color: bisque;
+}
+.accordation-item{
+    margin: 1rem 0;
+    justify-self: left;
+  
+}
+.accordation-header{
+    font-weight: bold;
+   position: relative;
+   cursor: pointer;
+  
+}
+.accordation-header::after{
+    content: "\25BE";
+    position: absolute;
+    font-size: 25px;
+    right:1rem;
+    transition: transform 0.2 ease-in-out;
+}
+.accordation-header.active::after{
+  transform: rotate(180deg);
+}
+.accordation-body{
+    border-top: 2px solid black;
+    border-image:linear-gradient(to right,rgb(9, 191, 9), rgb(240, 186, 104),rgb(238, 255, 0))  2;
+}
+.accordation-body-content{
+    display: none;
+}

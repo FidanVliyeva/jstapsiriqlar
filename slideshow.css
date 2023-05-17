@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(187, 187, 227)
+}
+.main{
+    width:600px;
+    height: 270px;
+    margin:  5rem auto;
+    background-color: white;
+    position: relative;
+}
+i{
+    position: absolute;
+}
+#previous{
+  font-size: 35px;
+  top:120px;
+   margin-left: 5px;
+   color: white;
+}
+#next{
+    font-size: 40px;
+    top:120px;
+    margin-left: 575px;
+    color: white;
+}
+.container{
+  position: relative;
+   top: 250px;
+   left:300px;
+}
+.main1{
+   border-radius: 100%;
+    width:10px;
+    height: 5px;
+    border: 1px solid black;
+    display: inline-block;
+}
